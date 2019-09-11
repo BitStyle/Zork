@@ -3,17 +3,6 @@ using System.Collections.Generic;
 
 namespace Zork
 {
-    enum Commands
-    {
-        QUIT,
-        LOOK,
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST,
-        UNKNOWN
-    }
-
     class Program
     {
         private static readonly string[,] Rooms =
@@ -74,6 +63,7 @@ namespace Zork
 
         private static bool Move(Commands command)
         {
+            Assert.IsTrue(IsDirection(command), "Invalid direction.");
 
             bool isValidMove = true;
             switch (command)
@@ -102,6 +92,16 @@ namespace Zork
         }
 
         private static Commands ToCommand(string commandString) => Enum.TryParse<Commands>(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
+
+        private static bool IsDirection(Commands command) => Directions.Contains(command);
+
+        private static readonly List<Commands> Directions = new List<Commands>
+        {
+            Commands.NORTH,
+            Commands.SOUTH,
+            Commands.EAST,
+            Commands.WEST
+        };
 
     }
 }
