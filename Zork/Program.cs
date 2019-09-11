@@ -15,6 +15,11 @@ namespace Zork
 
     class Program
     {
+        private static readonly string[,] Rooms =
+        {
+            {"Forest", "West of House", "Behind House", "Clearing", "Canyon View" }
+        };
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
