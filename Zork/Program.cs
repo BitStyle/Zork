@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Zork
 {
@@ -17,8 +18,20 @@ namespace Zork
     {
         private static readonly string[,] Rooms =
         {
-            {"Forest", "West of House", "Behind House", "Clearing", "Canyon View" }
+            {"Rocky Trail", "South of House", "Canyon View" },
+            {"Forest", "West of House", "Behind House" },
+            {"Dense Woods", "North of House", "Clearing" }
         };
+
+        private static string CurrentRoom
+        {
+            get
+            {
+                return Rooms[Location.Row, Location.Column];
+            }
+        }
+
+        private static (int Row, int Column) Location = (1,1);
 
         static void Main(string[] args)
         {
@@ -27,6 +40,7 @@ namespace Zork
             Commands command = Commands.UNKNOWN;
             while (command != Commands.QUIT)
             {
+                Console.WriteLine(CurrentRoom);
                 Console.Write("> ");
                 command = ToCommand(Console.ReadLine().Trim());
 
@@ -45,18 +59,49 @@ namespace Zork
                     case Commands.SOUTH:
                     case Commands.EAST:
                     case Commands.WEST:
-                        outputString = $"You moved {command}.";
+                        if(Move(command) == false)
+                        {
+                            Console.WriteLine("The way is shut!");
+                        }
                         break;
 
                     default:
-                        outputString = "Unknown command.";
+                        Console.WriteLine("Unknown command.");
                         break;
                 }
-
-                Console.WriteLine(outputString);
             }
         }
 
+        private static bool Move(Commands command)
+        {
+
+            bool isValidMove = true;
+            switch (command)
+            {
+                case Commands.NORTH when Location.Row > 0:
+                    Location.Row--;
+                    break;
+
+                case Commands.SOUTH when Location.Row < Rooms.GetLength(0) - 1:
+                    Location.Row++;
+                    break;
+
+                case Commands.EAST when Location.Column < Rooms.GetLength(1) - 1:
+                    Location.Column++;
+                    break;
+
+                case Commands.WEST when Location.Column > 0:
+                    Location.Column--;
+                    break;
+
+                default:
+                    isValidMove = false;
+                    break;
+            }
+            return isValidMove;
+        }
+
         private static Commands ToCommand(string commandString) => Enum.TryParse<Commands>(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
+
     }
 }
