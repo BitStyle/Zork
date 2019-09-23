@@ -34,7 +34,7 @@
         "Neighbors": {
           "North": "North of House",
           "East": "Clearing",
-          "West": "South of House"
+          "South": "South of House"
         }
       },
       {
@@ -58,7 +58,7 @@
         "Name": "Forest 3",
         "Description": "This is a dimly lit forest, with trees in all directions around you. To the east, there appears to be sunlight.",
         "Neighbors": {
-          "South": "South of House",
+          "North": "South of House",
           "East": "Clearing"
         }
       },
@@ -72,5 +72,4 @@
       }
     ]
   }
-
 }

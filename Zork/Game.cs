@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Zork
 {
-    class Game
+    public class Game
     {
         public World World { get; }
 
@@ -34,13 +34,42 @@ namespace Zork
                     Console.WriteLine(Player.Location.Description);
                     previousRoom = Player.Location;
                 }
+
+                Console.Write("\n> ");
+                Commands command = ToCommand(Console.ReadLine().Trim());
+
+                switch (command)
+                {
+                    case Commands.QUIT:
+                        IsRunning = false;
+                        break;
+
+                    case Commands.NORTH:
+                    case Commands.SOUTH:
+                    case Commands.EAST:
+                    case Commands.WEST:
+                        Directions direction = Enum.Parse<Directions>(command.ToString(), true);
+                        if (Player.Move(direction) == false)
+                        {
+                            Console.WriteLine("The way is shut!");
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("Unknown command.");
+                        break;
+                }
             }
         }
-    }
 
-    public static Game Load(string filename)
-    {
-        Game game = JsonConvert.DeserializeObject<Game>(File.ReadAllText(filename));
-        return game;
+        public static Game Load(string filename)
+        {
+            Game game = JsonConvert.DeserializeObject<Game>(File.ReadAllText(filename));
+            game.Player = game.World.SpawnPlayer();
+
+            return game;
+        }
+
+        private static Commands ToCommand(string commandString) => Enum.TryParse<Commands>(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
     }
 }
