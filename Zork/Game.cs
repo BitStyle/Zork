@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace Zork
@@ -78,6 +79,20 @@ namespace Zork
             game.Player = game.World.SpawnPlayer();
 
             return game;
+        }
+
+        private void LoadCommands()
+        {
+            Type[] types = Assembly.GetExecutingAssembly().GetTypes();
+            foreach(Type type in types)
+            {
+                CommandClassAttribute commandClassAttribute = type.GetCustomAttribute<CommandAttribute>();
+                if (commandAttribute != null)
+                {
+                    Command command = new Command(CommandAttribute.CommandName, commandAttribute.Verbs,
+                        (Action<Game, CommandContext>)Delegate.CreateDelegate(typeof(Action<Game, CommandContext>), method),)
+                }
+            }
         }
 
     }
