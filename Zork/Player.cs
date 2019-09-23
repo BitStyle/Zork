@@ -41,5 +41,7 @@ namespace Zork
 
             return isValidMove;
         }
+
+        public int Moves = 0;
     }
 }
