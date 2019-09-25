@@ -21,9 +21,9 @@ namespace Zork
 
         public bool PerformCommand(Game game, string commandString)
         {
-            bool result;
+            bool result = false;
             CommandContext commandContext = Parse(commandString);
-            if(commandContext.Command != null)
+            if (commandContext.Command != null)
             {
                 commandContext.Command.Action(game, commandContext);
                 result = true;
@@ -33,7 +33,7 @@ namespace Zork
                 result = false;
             }
 
-            return false;
+            return result;
         }
 
         public void AddCommand(Command command) => mCommands.Add(command);
@@ -44,4 +44,5 @@ namespace Zork
 
         private HashSet<Command> mCommands;
 
+    }
 }
