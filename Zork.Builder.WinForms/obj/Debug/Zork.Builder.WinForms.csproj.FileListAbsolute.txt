@@ -1,0 +1,15 @@
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\bin\Debug\Zork.Builder.WinForms.exe.config
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\bin\Debug\Zork.Builder.WinForms.exe
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\bin\Debug\Zork.Builder.WinForms.pdb
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csprojAssemblyReference.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Properties.Resources.resources
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.GenerateResource.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.exe
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.pdb
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.ZorkBuilderForm.resources
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.Fody.CopyLocal.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.CopyComplete
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.AddRoomForm.resources

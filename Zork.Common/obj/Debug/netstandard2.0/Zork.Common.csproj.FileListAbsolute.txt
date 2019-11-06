@@ -6,3 +6,12 @@ C:\Users\he548234\Source\Repos\BitStyle\Zork\Zork.Common\bin\Debug\netstandard2.
 C:\Users\he548234\Source\Repos\BitStyle\Zork\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.pdb
 C:\Users\he548234\Source\Repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.dll
 C:\Users\he548234\Source\Repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.pdb
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.deps.json
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.dll
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\bin\Debug\netstandard2.0\Zork.Common.pdb
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.csprojAssemblyReference.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.csproj.CoreCompileInputs.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.AssemblyInfoInputs.cache
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.AssemblyInfo.cs
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.dll
+C:\Users\silve\source\repos\BitStyle\Zork\Zork.Common\obj\Debug\netstandard2.0\Zork.Common.pdb
